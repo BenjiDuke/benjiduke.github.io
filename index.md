@@ -1,37 +1,5 @@
-## Welcome to GitHub Pages
+# CSCI 462 Blog Introduction
 
-You can use the [editor on GitHub](https://github.com/BenjiDuke/benjiduke.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+I'm  Benji Duke, a computer science major at CofC. I've been here for 2 years now, and my projected graduation date is December, 2020. I  completed an Associate's degree in Computer Technology in 2010 at  Midlands Technical College in West Columbia, then took a left turn and  joined the Navy in 2011 to become a nuclear electrician's mate. I left the Navy in 2017 to go back to school and pursue a Bachelor's in Computer Science. I've always had an interest in computers and programming. Hoping to use my degree to get a start on a new career, either in security or development. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/BenjiDuke/benjiduke.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
