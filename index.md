@@ -41,3 +41,30 @@ The article continues on to show how to use other options with Tshark, and expla
 This article is by Bryant Son (Red Hat, Correspondent) and deals with how internet security works by explaining the differences between HTTP and HTTPS, and explains the concept of Transport Layer Security(TLS), certificate authorities (CAs), and how they secure a website. From the artcle: The internet as we know it today is made up of six layers: physical, data, network, transport, security, and application. Security is considered a part of the application layer. This contains TLS and SSL, the cryptographic protocols which ensure secure comminication between the application and the end user.
 
 From what I could gather, the CAs are the vendors that issue the TLS/SSL certificates to websites in order to secure those websites. There is a way to self sign a certificate, and a number of open source tools to generate a certificate, but it is emphasized that this should be used as an option for developing and testing, not for the production stage. The article contained links to more in-depth discussions of how TLS works through a set of public and private keys, which may be worth reading later.
+
+# This Bugs Me
+
+### [TOS 6.4 :](https://quaid.fedorapeople.org/TOS/Practical_Open_Source_Software_Exploration/html/sn-Debugging_the_Code-Exercise_-_Find_the_Oldest_Bug.html)
+
+**Find the oldest bug that's still open in your chosen project. Write a blog entry describing the problem, with a theory about why the bug hasn't been resolved yet. (Bonus points if you can actually resolve the bug.)**
+
+My chosen project is Zulip, an open source group chat program. The oldest open bug in my chosen project is [notification tracebacks with Chrome on Android](https://github.com/zulip/zulip/issues/213). From reading the thread, it sounds like desktop notifications aren't working for Chrome on Android. I think it hasn't been closed yet because it's complicated. The Zulip app itself is available for Android, so it still works on the platform, but this issue is dealing specifically with Zulip in Chrome on Android. So when using Zulip in Chrome, notifications aren't pushed to desktop (or mobile/tablet/Android device). I think since this has gone unsolved so long since it's a niche issue. Or it's just complicated, since it appears this issue has been claimed and abandoned before now.
+
+### [TOS 6.5:](https://quaid.fedorapeople.org/TOS/Practical_Open_Source_Software_Exploration/html/sn-Debugging_the_Code-Exercise_-_Create_Your_Bug_Tracker_Account.html) Create Your Bug Tracker Account
+**Figure out how to create a new account on the bug tracker of your chosen project. You'll need that account very soon.**
+
+To track new bugs for this project, I would have to watch the "Issues" tab on the project GitHub. This would notify me by email whenever any new issue is made. 
+
+### [TOS 6.6:](https://quaid.fedorapeople.org/TOS/Practical_Open_Source_Software_Exploration/html/sn-Debugging_the_Code-The_Anatomy_of_a_Good_Bug_Report.html) Reproducing a bug.
+
+Good bug reports will include a way to reproduce the bug. I found a recent one from my chosen project, where the user profile's [full name does not update after editing.](https://github.com/zulip/zulip/issues/13820). The name does reflect the change after closing and reopening the user settings window, but the change for the Full Name field is not immediately reflected after changing. I was able to reproduce the bug in the Zulip for Windows app as well, and it appears someone is already working on it as of yesterday.
+
+### [TOS 6.7:](https://quaid.fedorapeople.org/TOS/Practical_Open_Source_Software_Exploration/html/sn-Debugging_the_Code-Bug_Triage.html) Bug Triage
+
+**Find five bug reports in the new state, and attempt to triage them according to the rules above. Your goal is to do as much as you possibly can, in a short period of time, to make those bug reports as useful as possible to the developer to whom they are assigned.**
+
+I was able to find bugs from looking at the open issues with the "bug" tag on Zulip's GitHub page. They are assigned tags based on what type of issue it is, and are given a priority tag by other developers after they've looked at the issue. The rules for bug reporting are found on [Zulip's reporting guide.](https://zulip.readthedocs.io/en/latest/overview/contributing.html#reporting-issues). The rules say that if you're experienced in bug reports, just open an issue on the Zulip GitHub. If not, then go to the Zulip community server and make a post in the #issues channel describing the problem. Others will determine if this bug has been addressed previously, as in maybe it's already an open issue, and can direct people from there. The only caveat is for security related issues, which are not to be discussed in a public channel. Security issues are reported directly to the security team at their specified email address found in the above link.
+
+### Reflections
+
+Doing these exercises with this project was very informative. From what it looks like, the developers here are on top of their issues. All of the open issues I've looked at were tagged and prioritized by the project lead. Other community members would put in their two cents on replicating the issue, the likely cause of the problem, or where to look to start fixing it. There are a few issues I think our team could contribute to fixing over the course of the semester.
