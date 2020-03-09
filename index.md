@@ -77,3 +77,38 @@ For this week I've chosen to read the article "Preparing Tomorrow's Faculty to A
 The article goes on to explain how a handful of universities produce most of the Ph.D.'s who go on to be computer science faculty, and by targeting them for the CD teaching boot camp, they can change how CS faculty view education and teaching. Good teachers are not born, they're made. 
 
 From my own experience as a student I can say that I did initially believe that, with regards to programming, some people either just "got it" or they didn't. After spending a semester as a teaching assistant for an introductory programming course, I'd like to revise that statement. Some students do have a knack for programming, that much is true, but I also found that every student that put forth the effort to learn was able to succeed in the course. All it took most of time was rephrasing something in a way the student could understand in order for them to grasp the concepts the course was trying to teach. I'm glad that there is an effort by the researchers in the article to create better CS faculty by teaching them how to apply these evidence-based best practices. The way we educate people in computer science should constantly be improved upon to keep up with the changes and advancements made in the field.
+
+
+### Stupid or Solid?
+# Reflections on [S.O.L.I.D.](https://williamdurand.fr/2013/07/30/from-stupid-to-solid-code/)
+
+This article brings some important points on the differences between good (SOLID) and bad (STUPID) code using acronyms to highlight important concepts. 
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Singleton_pattern"><strong>S</strong>ingleton</a></li>
+  <li><strong>T</strong>ight Coupling</a></li>
+  <li><strong>U</strong>ntestability</a></li>
+  <li><strong>P</strong>remature Optimization</a></li>
+  <li><strong>I</strong>ndescriptive Naming</a></li>
+  <li><strong>D</strong>uplication</a></li>
+</ul>
+
+I didn't know what the Singleton pattern was prior to reading this. The Singleton pattern restricts the instantiation of a class to one "single" instance. It makes the instance of a class global, and the problem with using this is that it's difficult to test and often a better solution can be made. The author suggests avoiding reliance on singleton classes because they lead to tight coupling. Coupling is the degree to which each program module relies on another. So if you can't change one module without having to change another, or several others, you've got tight coupling. 
+
+These two problems contribute to untestable code. The author goes over how testing code should not be difficult, and if it is then there may be bigger problems. The author then warns about Premature Optimization. When to optimize? 
+"A friend of mine often says that there are two rules to optimize an application:"
+<ul>
+  <li>don’t do it;</li>
+  <li>(for experts only!) don’t do it yet.</li>
+</ul>
+This made sense to me after reading it. I've run into issues on past assignments where I have working code, but realize there are a few improvements that could be made. After the improvements, the code didn't work as expected anymore. So rather than making more efficient code I'd end up troubleshooting the "improved" code and make the assignment take longer to complete than necessary. Lesson learned. 
+Indescriptive naming is another part of our STUPID acronym, and it's exactly what you think it is. I'm pretty sure everyone has been guilty of this, especially starting out. For example, Variable names: num1, num2, var... what are these variables? What's the number for? Rather than writing code that requires too many comments to make sense of it, just rename the variables and functions to more descriptive names to make it readable. Duplicated code is where you end up writing the same code in more than one place. The better thing to do would be to write that code in a function and call it where needed. It's usually pretty easy to catch yourself writing the same code, and even easier to throw that code in a function instead. 
+
+<ul>
+  <li><strong>S</strong>ingle Responsibility Principle</a></li>
+  <li><strong>O</strong>pen/Closed Principle</a></li>
+  <li><strong>L</strong>iskov Substitution Principle</a></li>
+  <li><strong>I</strong>nterface Segregation Principle</a></li>
+  <li><strong>D</strong>ependency Inversion Principle</a></li>
+</ul>
+
+SOLID code goes over how each of these key points in how to improve the way you write code. Single Responsibility Principle is about making each part of the code do the one thing it's meant to, and avoid a "god" class that has all the functions rolled into it. Open/Closed Principle means that "software entities should be open for extension, but closed for modification." Easy to expand on, closed to modification. Liskov Substitution Principle means that "objects in a program should be replaceable with instances of their subtypes without altering the correctness of the program." So a subtype could add things, but not lose any functionality of its parent type. Sounds like a good idea to me. Interface Segregation Principle states that "many client-specific interfaces are better than one general-purpose interface." It makes sense to start with a general purpose interface and modify it into a client-specific one. The author says this produces low coupling and high cohesion. High cohesion keeps similar elements together, and low coupling means that each module isn't needlessly tangled with another. The Dependency Inversion Principle is about coding to the interface, which reduces dependency and makes code more reusable. All of these things together make code easier to understand, by having more descriptive names and having each function/module be single-use. Solid advice for programmers. 
