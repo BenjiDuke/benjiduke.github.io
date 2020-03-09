@@ -79,8 +79,8 @@ The article goes on to explain how a handful of universities produce most of the
 From my own experience as a student I can say that I did initially believe that, with regards to programming, some people either just "got it" or they didn't. After spending a semester as a teaching assistant for an introductory programming course, I'd like to revise that statement. Some students do have a knack for programming, that much is true, but I also found that every student that put forth the effort to learn was able to succeed in the course. All it took most of time was rephrasing something in a way the student could understand in order for them to grasp the concepts the course was trying to teach. I'm glad that there is an effort by the researchers in the article to create better CS faculty by teaching them how to apply these evidence-based best practices. The way we educate people in computer science should constantly be improved upon to keep up with the changes and advancements made in the field.
 
 
-### Stupid or Solid?
-# Reflections on [S.O.L.I.D.](https://williamdurand.fr/2013/07/30/from-stupid-to-solid-code/)
+# Stupid or Solid?
+### Reflections on [S.O.L.I.D.](https://williamdurand.fr/2013/07/30/from-stupid-to-solid-code/)
 
 This article brings some important points on the differences between good (SOLID) and bad (STUPID) code using acronyms to highlight important concepts. 
 <ul>
