@@ -141,3 +141,24 @@ The chapter mentions that unit testing each module individually should lead to i
 Before adding new features, make sure software is receptive to them. Remove "bad smells," like duplicate code, poorly named variables, or update some unreadable code with comments. There are some parallels between "STUPID" code and the "bad smells" the author covered. Remove "bad smells," like duplicate code, poorly named variables, or update some unreadable code with comments. Towards the end of the chapter there's a list of these common bad smells. Pretty much all of them were covered in the "From STUPID to SOLID code" article by William Durand, although they may be called something different. Poorly named variables seem to be a universal problem. As does too few or too many comments. The problem with too many comments is that if the code requires many comments to describe its function, then it could probably be rewritten to be more readable. 
 
 The chapter goes over a bit about the Issues tab on GitHub for the Homeplate software project, mostly just the terminology used. It's a good platform for receiving some client feedback, and a good place to interact or suggest things to a projects developers. 
+
+
+# Chapter 6
+#### Database Development
+
+This chapter covers the database aspects of CO-FOSS projects.
+Databases live on a server, and their contents are accessed by programs. The data “persists” in the database even when a program is not using it, which gives them the characteristic of “persistence.”
+The relational model is a thing. This entity is related to that one, primary keys act as a unique identifier, and so on. SQL is a language. A Structured Query Language, to be precise. 
+This chapter reviews a lot of content covered in a Database course. 
+
+Concurrency is maintained is different ways depending on the “storage engine” used. There’s table-level locking, which ensures data integrity when multiple users are accessing the same table. The table will be locked by a user until it is released at the end of the first user’s query. Row-level locking prevents conflicts the same way for individual rows.
+In connecting the program to the database, the chapter states that one can embed database queries directly into the code when a database action is needed. There’s a security risk of a SQL injection attack for any fields a user can access that initiate a database action, if the proper security has not been implemented. 
+A “database abstraction layer” can enhance database security by preventing a SQL injection attack. The abstraction layer provides an API to handle SQL queries.
+
+Permissions can be granted and revoked via GRANT and REVOKE.
+
+Possibly important acronym: CRUD – Create Retrieve Update Delete. 
+CRUD is useful when testing the database. First is the setup, where the ability to create new entries in the database is tested. Then testing the Retrieve and Update parts of the CRUD functions. Finally, the teardown, which tests the Delete functions to delete things from the table. 
+
+
+
