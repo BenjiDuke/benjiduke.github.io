@@ -125,3 +125,19 @@ Planning the layout is important for keeping everything organized so the points 
 Good documentation is meant to answer any questions the reader of the documentation has. It should directly answer a question a user may ask, and cover all situations users may encounter while using the software. If a user runs into a problem or something unexpected and cannot find an answer in the documentation, then that's bad documentation.
 
 The Teaching Open Source examples also covered documentation, and had a few exercises to do with peers. Coming from working on our open source project, I can say that the community will let you know when something requires documentation. If a user asks a question about something within the code, then the answer should generally be added to the documentation and commented in the code. 
+
+# Chapter 5
+#### Domain Class Development
+
+This chapter covered a lot of useful information pertaining to testing. The chapter mentions three significant areas when developing new code: coding, unit testing, and system testing. Coding involves not just writing new code from scratch, but also reusing code, or picking a code base to build off of to customize to meet your project's needs. Unit testing is the testing of an individual module, to ensure the setters and getters return the proper values, and that they work as intended. Tests should be done on individual modules during unit testing before starting system testing. 
+
+System testing involves merging the results of each team member's coding & testing efforts, and testing them together under an "integration test." Ensures combined work of individual developers has no conflicting overlaps or inconsistencies.
+
+This reminds me of what was covered in CSCI-362, where the team I was working with had to develop a testing framework for a FOSS project. We made a bunch of unit tests to test the projects functions, where the test output was checked against the oracle, or expected output. The tests would fail if the software encountered an unexpected error, or if the unit test was improperly formatted.  
+
+Unit tests are typically written to construct an object and check the function of its getters and setters to be sure they return the proper value, and work how they are supposed to. 
+
+The chapter mentions that unit testing each module individually should lead to integration testing, where the interactions between modules that depend on other modules are tested. Debugging - removing defects or flaws in code that contribute to a failure when the software is running. A failure is unacceptable behavior in software as observed by the user.
+Before adding new features, make sure software is receptive to them. Remove "bad smells," like duplicate code, poorly named variables, or update some unreadable code with comments. There are some parallels between "STUPID" code and the "bad smells" the author covered. Remove "bad smells," like duplicate code, poorly named variables, or update some unreadable code with comments. Towards the end of the chapter there's a list of these common bad smells. Pretty much all of them were covered in the "From STUPID to SOLID code" article by William Durand, although they may be called something different. Poorly named variables seem to be a universal problem. As does too few or too many comments. The problem with too many comments is that if the code requires many comments to describe its function, then it could probably be rewritten to be more readable. 
+
+The chapter goes over a bit about the Issues tab on GitHub for the Homeplate software project, mostly just the terminology used. It's a good platform for receiving some client feedback, and a good place to interact or suggest things to a projects developers. 
