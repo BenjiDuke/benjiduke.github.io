@@ -160,5 +160,15 @@ Permissions can be granted and revoked via GRANT and REVOKE.
 Possibly important acronym: CRUD – Create Retrieve Update Delete. 
 CRUD is useful when testing the database. First is the setup, where the ability to create new entries in the database is tested. Then testing the Retrieve and Update parts of the CRUD functions. Finally, the teardown, which tests the Delete functions to delete things from the table. 
 
+# Chapter 9
+
+Continuing the Journey. 
+
+This chapter is about completion of CO-FOSS product, installing on the client’s server, and transitioning to long term client support.
+
+The Homebase case study is a good example of how client support works. Homebase is the software running on the client’s server. When the client encounters a bug, they reach out to the developer to discuss the issue, so the developers can investigate it. In this case, the client’s database was unable to properly handle names that include an ampersand. The developers then reproduce the bug and locate the defect. They track it to a module named viewPerson.php, then see how it handles the first_name variable which is causing the problem. They write replacement code that changes any ‘&’ in the variable to ‘and’, which will work properly with the database. 
+
+After completing the fix, it is tested in all applicable use cases to make sure it works as intended. After testing is complete, the developers send the fix along with instructions to the developer managing the client’s long-term support, so they can implement it. The client is notified, and the database entries that previously included ‘&’ are corrected. The email exchanges between the client and developers looks a lot like what can be found on many open source GitHub pages, when a user discovers a bug or suggests a feature. 
+
 
 
